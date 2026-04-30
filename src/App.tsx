@@ -9,6 +9,7 @@ import Particles from './components/Particles';
 import Countdown from './components/Countdown';
 import CoupleDetails from './components/CoupleDetails';
 import InteractiveEvents from './components/InteractiveEvents';
+import WeddingAlbum from './components/WeddingAlbum';
 import PhotoGallery from './components/PhotoGallery';
 import MapSection from './components/MapSection';
 import RSVPForm from './components/RSVPForm';
@@ -37,12 +38,12 @@ export default function App() {
             <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(212,175,55,0.08)_0%,transparent_50%)] pointer-events-none z-[-1]" />
 
             <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center py-8 pointer-events-none">
-              <div className="glass-gold px-10 py-4 rounded-full flex gap-10 items-center border border-gold/20 pointer-events-auto shadow-2xl">
-                <a href="#about" className="text-[10px] uppercase font-bold tracking-[0.3em] text-zinc-400 hover:text-gold transition-colors">Couple</a>
-                <Heart size={12} className="text-gold" fill="#D4AF37" />
+              <div className="glass-gold px-10 py-4 rounded-full flex gap-6 md:gap-10 items-center border border-gold/20 pointer-events-auto shadow-2xl">
+                <a href="#about" className="text-[10px] uppercase font-bold tracking-[0.3em] text-zinc-400 hover:text-gold transition-colors hidden md:block">Couple</a>
+                <Heart size={12} className="text-gold hidden md:block" fill="#D4AF37" />
                 <a href="#events" className="text-[10px] uppercase font-bold tracking-[0.3em] text-zinc-400 hover:text-gold transition-colors">Events</a>
                 <Heart size={12} className="text-gold" fill="#D4AF37" />
-                <a href="#gallery" className="text-[10px] uppercase font-bold tracking-[0.3em] text-zinc-400 hover:text-gold transition-colors">Gallery</a>
+                <a href="#album" className="text-[10px] uppercase font-bold tracking-[0.3em] text-zinc-400 hover:text-gold transition-colors">Album</a>
                 <Heart size={12} className="text-gold" fill="#D4AF37" />
                 <a href="#rsvp" className="text-[10px] uppercase font-bold tracking-[0.3em] text-zinc-400 hover:text-gold transition-colors">RSVP</a>
               </div>
@@ -81,6 +82,10 @@ export default function App() {
 
             <div id="events">
               <InteractiveEvents />
+            </div>
+
+            <div id="album">
+              <WeddingAlbum />
             </div>
 
             <div id="gallery">
